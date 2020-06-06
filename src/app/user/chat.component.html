@@ -1,0 +1,17 @@
+<div class="centerDiv">
+    <table class="table table-bordered myTable">
+        <thead class="thead-dark">
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let user of usersList">
+                <td>{{ user.first_name }} {{ user.last_name }}</td>
+                <td>{{ user.email }}</td>
+                <td><button class="btn btn-success"(click)="startChat($event)" id="{{ user.id }}">Chat</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

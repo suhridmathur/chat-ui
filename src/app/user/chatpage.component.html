@@ -1,0 +1,12 @@
+<div class="parentDiv">
+    <div class="centerDivTop" id="msgContainer">
+        <li [ngClass]="{ 'rightmessage' : message.username == myUsername }" class="listOfMessages" *ngFor="let message of messages">
+            {{ message.message }}
+        </li>
+    </div>
+    
+    <div class="centerDivBottom">
+        <input class="form-control" type="text" [(ngModel)]="message">
+        <button class="btn btn-primary sendButton"(click)="sendMessage()">Send Message</button>
+    </div>
+</div>
